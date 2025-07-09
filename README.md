@@ -66,7 +66,7 @@ git clone https://github.com/abu-wafa/QR-generator.git
 # Open index.html in your browser
 📄 License
 This project is licensed under the MIT License.
-
+```
 🙌 Credits
 QRCode.js
 
