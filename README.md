@@ -46,12 +46,14 @@ It generates the QR code dynamically and displays it on the page for easy downlo
 
 ## 📂 Project Structure
 
-📦 qr-code-generator/
+```plaintext
+qr-code-generator/
 │
-├── index.html # Main HTML file
-├── style.css # CSS styling
-├── main.js # JavaScript functionality
-└── qrcode.min.js # QRCode.js library
+├── index.html       # Main HTML file
+├── style.css        # CSS styling
+├── main.js          # JavaScript functionality
+└── qrcode.min.js    # QRCode.js library
+
 
 ---
 
