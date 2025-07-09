@@ -54,7 +54,7 @@ qr-code-generator/
 ├── main.js          # JavaScript functionality
 └── qrcode.min.js    # QRCode.js library
 
-
+```
 ---
 
 ## 💡 Usage
