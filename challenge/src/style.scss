@@ -90,7 +90,7 @@ body {
     }
     .generated-qr {
       margin-top: 50px;
-      width: 25%;
+      width: 40%;
       .qr-wrapper {
         position: relative;
         display: flex;
@@ -123,11 +123,16 @@ body {
         .buttons-container {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: space-evenly;
         }
         button {
           @include button-style(fit-content);
-          padding: 15px 30px;
+          padding: 18px 50px;
+          display: flex;
+          align-items: center;
+          span {
+            margin-right: 5px;
+          }
         }
       }
     }

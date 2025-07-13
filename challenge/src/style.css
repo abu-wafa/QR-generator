@@ -89,7 +89,7 @@ body {
 }
 .bg-container .contianer .generated-qr {
   margin-top: 50px;
-  width: 25%;
+  width: 40%;
 }
 .bg-container .contianer .generated-qr .qr-wrapper {
   position: relative;
@@ -124,7 +124,7 @@ body {
 .bg-container .contianer .generated-qr .utilites .buttons-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .bg-container .contianer .generated-qr .utilites button {
   width: -moz-fit-content;
@@ -135,5 +135,10 @@ body {
   outline: none;
   border: none;
   border-radius: 10px;
-  padding: 15px 30px;
+  padding: 18px 50px;
+  display: flex;
+  align-items: center;
+}
+.bg-container .contianer .generated-qr .utilites button span {
+  margin-right: 5px;
 }/*# sourceMappingURL=style.css.map */
