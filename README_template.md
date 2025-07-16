@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name} | devChallenges</h1>
+<h1 align="center">{QR Generator} | devChallenges</h1>
 
 <div align="center">
    Solution for a challenge <a href="https://devchallenges.io/challenge/qa-code-generator" target="_blank">QR code generator </a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
@@ -64,11 +64,8 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- Scss
+- Vanilla Js
 
 ## Features
 
@@ -78,9 +75,11 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Acknowledgements
 
+-Anime js    
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
 ## Author
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
+
+- 1linkedIn [@Abulwafa](https://www.linkedin.com/in/abdelsalam-abu-elwafa/)
+- GitHub [@Abulwafa](https://github.com/abu-wafa/)
