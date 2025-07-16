@@ -99,6 +99,7 @@ const buttons_animation = () => {
 // generate QR code functionality
 const Qr_code_Generator = () => {
   const submitButton = document.getElementById("scan-btn");
+
   // initialize QRCode object
   const qrCode = new QRCode(document.getElementById("qrcode"), {
     text: "",
@@ -110,17 +111,18 @@ const Qr_code_Generator = () => {
   });
   const generateQR = () => {
     const url = document.getElementById("qr-input").value.trim();
+    const qr_wrapper = document.querySelector(".generated-qr");
+    const inputField = document.querySelector(".input-wrapper");
+
     if (url) {
       qrCode.makeCode(url);
+      qr_wrapper.classList.add("show");
+      inputField.classList.add("hide");
     } else {
       alert("Please enter a valid URL");
     }
   };
   submitButton.addEventListener("click", () => {
-    const qr_wrapper = document.querySelector(".generated-qr");
-    const inputField = document.querySelector(".input-wrapper");
-    qr_wrapper.classList.add("show");
-    inputField.classList.add("hide");
     generateQR();
   });
 };
