@@ -81,5 +81,5 @@ This application/site was created as a submission to a [DevChallenges](https://d
 ## Author
 
 
-- 1linkedIn [@Abulwafa](https://www.linkedin.com/in/abdelsalam-abu-elwafa/)
+- linkedIn [@Abulwafa](https://www.linkedin.com/in/abdelsalam-abu-elwafa/)
 - GitHub [@Abulwafa](https://github.com/abu-wafa/)
