@@ -122,11 +122,25 @@ const Qr_code_Generator = () => {
       alert("Please enter a valid URL");
     }
   };
-  submitButton.addEventListener("click", () => {
-    generateQR();
+  submitButton.addEventListener("click", generateQR);
+};
+// Download QR code functionality
+const Download_fun = () => {
+  // this function handles the download of the generated QR code as an image
+  const Download_btn = document.getElementById("download-btn");
+  Download_btn.addEventListener("click", () => {
+    const img_src = document.querySelector("#qrcode img").src;
+    const fileName = "image.png";
+    const link = document.createElement("a");
+    link.href = img_src;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 };
 
 Qr_code_Generator();
 firstAnimation();
 buttons_animation();
+Download_fun();
