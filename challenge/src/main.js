@@ -116,7 +116,13 @@ const Qr_code_Generator = () => {
       alert("Please enter a valid URL");
     }
   };
-  submitButton.addEventListener("click", generateQR);
+  submitButton.addEventListener("click", () => {
+    const qr_wrapper = document.querySelector(".generated-qr");
+    const inputField = document.querySelector(".input-wrapper");
+    qr_wrapper.classList.add("show");
+    inputField.classList.add("hide");
+    generateQR();
+  });
 };
 
 Qr_code_Generator();
