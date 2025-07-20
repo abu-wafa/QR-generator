@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="{https://qr-generator-omega-eight.vercel.app/}">
+    <a href="https://qr-generator-omega-eight.vercel.app/">
       Demo
     </a>
     <span> | </span>
