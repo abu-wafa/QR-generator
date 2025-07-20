@@ -31,7 +31,7 @@ It generates the QR code dynamically and displays it on the page for easy downlo
 
 ## 📷 Demo
 
-> 🔗 **Live Preview:** [Click here to try it!](#)
+> 🔗 **Live Preview:** [Click here to try it!](https://qr-generator-omega-eight.vercel.app/)
 
 ---
 
