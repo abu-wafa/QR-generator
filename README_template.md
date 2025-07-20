@@ -37,7 +37,6 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 <img width="1383" height="666" alt="image" src="https://github.com/user-attachments/assets/29914b00-1a17-4a23-8c4c-0fc780a96b7f" />
 
 
