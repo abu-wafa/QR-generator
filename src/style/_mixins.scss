@@ -1,0 +1,38 @@
+@import "breakpoints";
+
+@mixin respond-up($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in map.";
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value != null {
+    // Subtract a tiny amount to prevent overlap with min-width
+    $max: $value - 0.02px;
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$breakpoint}` not found in map.";
+  }
+}
+
+@mixin respond-between($min, $max) {
+  $min-val: map-get($breakpoints, $min);
+  $max-val: map-get($breakpoints, $max);
+  @if $min-val != null and $max-val != null {
+    $max-val: $max-val - 0.02px;
+    @media (min-width: $min-val) and (max-width: $max-val) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoints: `#{$min}` to `#{$max}`.";
+  }
+}

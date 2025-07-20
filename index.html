@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./public/qr-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/./style/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <title>QR SCANNER</title>
+  </head>
+  <body>
+    <div class="bg-container">
+      <div class="contianer">
+        <div class="img-wrapper">
+          <img src="./assets/icons/Logo.svg" />
+        </div>
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="qr-input"
+            autocomplete="off"
+            placeholder="Enter The URL"
+          />
+          <button id="scan-btn">QR code</button>
+        </div>
+        <div class="generated-qr">
+          <div class="qr-wrapper">
+            <div id="qrcode"></div>
+          </div>
+          <div class="utilites">
+            <div class="buttons-container">
+              <button id="download-btn">
+                <span>Download</span> <img src="./assets/icons/download.svg" />
+              </button>
+              <button id="share-btn">
+                <span>share</span> <img src="./assets/icons/share.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

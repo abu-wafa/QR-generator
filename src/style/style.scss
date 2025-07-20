@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap");
+@import "mixins";
+
+$primary-color: #263fa9;
+$secondary-color: #030616;
+$white-1: #f2f5f9;
+$white-2: #fafaf9;
+$white-3: #f8fafc1a;
+@mixin button-style($width) {
+  width: $width;
+  cursor: pointer;
+  background-color: $primary-color;
+  color: $white-1;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  background-color: #3d4a71;
+}
+.bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom center; /* 🔥 anchor bottom edge */
+
+  transform: translateY(var(--ty)) scaleY(var(--scaleY));
+  background-image: url("../../assets/imgs/qa-bg-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-container {
+  // --scaleY: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  .contianer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    .input-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 3px solid $primary-color;
+      margin-top: 20px;
+      width: 50dvw;
+      height: 4.5rem;
+      border-radius: 20px;
+      background-color: $secondary-color;
+      padding: 5px;
+      #qr-input {
+        width: 80%;
+        margin-left: 15px;
+        color: $white-1;
+        background-color: transparent;
+        border: none;
+        font-size: small;
+        font-weight: 500;
+        outline: none;
+      }
+      #qr-input::placeholder {
+        color: $white-1;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+      button {
+        @include button-style(20%);
+      }
+    }
+    .generated-qr {
+      display: none;
+      margin-top: 50px;
+      width: 100%;
+      .qr-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        #qrcode {
+          width: 200px;
+          height: 200px;
+          background-color: #ffffff;
+          padding: 15px;
+          border-radius: 20px;
+          z-index: 1;
+          position: relative;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+        }
+      }
+      .qr-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+      .utilites {
+        margin-top: 50px;
+        .buttons-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 2rem;
+        }
+        button {
+          @include button-style(fit-content);
+          padding: 18px 50px;
+          display: flex;
+          align-items: center;
+          span {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@include respond-down(sm) {
+  .bg-container .contianer .input-wrapper {
+    width: 90vw;
+    height: 3.5rem;
+    button {
+      font-size: xx-small;
+      width: 30%;
+      padding: 0;
+    }
+  }
+  .bg-container .contianer .generated-qr .utilites button {
+    padding: 10px 25px;
+  }
+}
+@include respond-between(sm, md) {
+  .bg-container .contianer .input-wrapper {
+    width: 90vw;
+  }
+}
+@include respond-up(xxl) {
+  .contianer {
+    gap: 2rem;
+    .generated-qr .utilites button {
+      font-size: large;
+    }
+  }
+}

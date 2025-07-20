@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&display=swap");
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  background-color: #3d4a71;
+}
+
+.bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom center; /* 🔥 anchor bottom edge */
+  transform: translateY(var(--ty)) scaleY(var(--scaleY));
+  background-image: url("../../assets/imgs/qa-bg-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.bg-container .contianer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.bg-container .contianer .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 3px solid #263fa9;
+  margin-top: 20px;
+  width: 50dvw;
+  height: 4.5rem;
+  border-radius: 20px;
+  background-color: #030616;
+  padding: 5px;
+}
+.bg-container .contianer .input-wrapper #qr-input {
+  width: 80%;
+  margin-left: 15px;
+  color: #f2f5f9;
+  background-color: transparent;
+  border: none;
+  font-size: small;
+  font-weight: 500;
+  outline: none;
+}
+.bg-container .contianer .input-wrapper #qr-input::-moz-placeholder {
+  color: #f2f5f9;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+.bg-container .contianer .input-wrapper #qr-input::placeholder {
+  color: #f2f5f9;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+.bg-container .contianer .input-wrapper button {
+  width: 20%;
+  cursor: pointer;
+  background-color: #263fa9;
+  color: #f2f5f9;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+.bg-container .contianer .generated-qr {
+  display: none;
+  margin-top: 50px;
+  width: 100%;
+}
+.bg-container .contianer .generated-qr .qr-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bg-container .contianer .generated-qr .qr-wrapper #qrcode {
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.bg-container .contianer .generated-qr .qr-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.bg-container .contianer .generated-qr .utilites {
+  margin-top: 50px;
+}
+.bg-container .contianer .generated-qr .utilites .buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.bg-container .contianer .generated-qr .utilites button {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background-color: #263fa9;
+  color: #f2f5f9;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 50px;
+  display: flex;
+  align-items: center;
+}
+.bg-container .contianer .generated-qr .utilites button span {
+  margin-right: 5px;
+}
+
+@media (max-width: 575.98px) {
+  .bg-container .contianer .input-wrapper {
+    width: 90vw;
+    height: 3.5rem;
+  }
+  .bg-container .contianer .input-wrapper button {
+    font-size: xx-small;
+    width: 30%;
+    padding: 0;
+  }
+  .bg-container .contianer .generated-qr .utilites button {
+    padding: 10px 25px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .bg-container .contianer .input-wrapper {
+    width: 90vw;
+  }
+}
+@media (min-width: 1400px) {
+  .contianer {
+    gap: 2rem;
+  }
+  .contianer .generated-qr .utilites button {
+    font-size: large;
+  }
+}/*# sourceMappingURL=style.css.map */
